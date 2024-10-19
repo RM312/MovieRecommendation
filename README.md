@@ -1,4 +1,4 @@
-Here’s the updated `README.md` incorporating the use of **Cosine Similarity** for recommendations:
+Here is your updated README file with the link to access the project included:
 
 ---
 
@@ -11,6 +11,8 @@ This project is a **Movie Recommender System** that processes data in a Jupyter 
 1. **Data Processing in Jupyter Notebook**: Data cleaning, processing, and model training are performed in the `MovieRecommender.ipynb`. Cosine similarity is used to calculate the similarity between movies based on their features. The results, including the recommendation model, are serialized into a binary file that the main program can load.
   
 2. **User Interface using Streamlit**: The UI is developed using Streamlit (`app.py`), which provides an interactive interface where users can input their preferences and get movie recommendations.
+
+You can access the live version of the project here: [Movie Recommender System](https://movierecommendation-wgbzf6btctioktz9zj9rjv.streamlit.app/)
 
 ---
 
@@ -103,3 +105,4 @@ These commands ensure all necessary packages are installed for both data process
 2. **Streamlit for the User Interface**: The Streamlit app (`app.py`) provides an intuitive web-based UI where users can input their movie preferences. It uses the cosine similarity matrix and the pre-trained model to provide movie recommendations.
 
 3. **Dataset from Kaggle**: The dataset for this recommender system is sourced from Kaggle’s TMDB Movie Metadata dataset, and the user is expected to download it before running the Notebook.
+
