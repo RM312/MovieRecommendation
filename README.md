@@ -1,7 +1,3 @@
-Here is your updated README file with the link to access the project included:
-
----
-
 # Movie Recommender System
 
 ## Overview
