@@ -103,5 +103,3 @@ These commands ensure all necessary packages are installed for both data process
 2. **Streamlit for the User Interface**: The Streamlit app (`app.py`) provides an intuitive web-based UI where users can input their movie preferences. It uses the cosine similarity matrix and the pre-trained model to provide movie recommendations.
 
 3. **Dataset from Kaggle**: The dataset for this recommender system is sourced from Kaggle’s TMDB Movie Metadata dataset, and the user is expected to download it before running the Notebook.
-
-Let me know if you need any more adjustments!
