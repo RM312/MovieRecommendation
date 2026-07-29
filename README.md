@@ -8,7 +8,7 @@ This project is a **Movie Recommender System** that processes data in a Jupyter 
   
 2. **User Interface using Streamlit**: The UI is developed using Streamlit (`app.py`), which provides an interactive interface where users can input their preferences and get movie recommendations.
 
-You can access the live version of the project here: [Movie Recommender System](https://movierecommendation-wgbzf6btctioktz9zj9rjv.streamlit.app/)
+You can access the live version of the project here: [Movie Recommender System](https://movie-deploy-za23lmsb9v5udkypcrpmop.streamlit.app/)
 
 ---
 
