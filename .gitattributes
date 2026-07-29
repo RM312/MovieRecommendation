@@ -1,3 +1,5 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+
 # Python
 __pycache__/
 *.py[cod]
