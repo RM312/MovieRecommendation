@@ -1,11 +1,14 @@
 # 🎬 Movie Recommender System
 
-## Overview
+## 📌 Overview
 
-- This project is a Movie Recommender System that processes data in a Jupyter Notebook and uses the processed data in a Python-based UI built with Streamlit. The recommendation system is based on Cosine Similarity, a technique commonly used to measure the similarity between two vectors (in this case, movie features). The workflow is split into two parts:
+This project is a Content-Based Movie Recommendation System that suggests movies based on similarity between their features such as genres, cast, keywords, and overview. The system is built using a modular pipeline and deployed with an interactive Streamlit web application.
+The workflow is divided into two main stages:
+- Data Processing & Model Building  
+Handles data cleaning, feature engineering, vectorization, and similarity computation.
+- User Interface (Streamlit App)  
+Provides an interactive platform for users to select a movie and receive recommendations in real time.
 
-- Data Processing in Jupyter Notebook: Data cleaning, processing, and model training are performed in the MovieRecommender.ipynb. Cosine similarity is used to calculate the similarity between movies based on their features. The results, including the recommendation model, are serialized into a binary file that the main program can load.
-User Interface using Streamlit: The UI is developed using Streamlit (app.py), which provides an interactive interface where users can input their preferences and get movie recommendations.
 
 ---
 
@@ -32,21 +35,26 @@ MovieRecommendation/
 ├── app/                    # Streamlit application
 │   └── app.py
 │
-├── data/                   # Dataset and processed files
+├── data/                   # Processed dataset and model files
 │   ├── movies.pkl
 │   └── similarity.pkl
 │
-├── notebooks/              # Jupyter notebooks for preprocessing
+├── notebooks/              # Data preprocessing & model building
 │   └── MovieRecommender.ipynb
 │
-├── src/                    # Core recommendation logic
-│   └── recommender.py (or similar logic files)
+├── src/                    # Core recommendation logic (modular pipeline)
+│   ├── data_loader.py
+|   ├── feature_engineering.py
+|   ├── preprocessing.py
+|   ├── train.py
+|   ├── vectorizer.py
+|   └── recommender.py
 │
-├── requirements.txt        # Dependencies
+├── requirements.txt        # Project dependencies
 └── README.md
 ```
-
 ---
+
 
 ## 🧠 Methodology
 
