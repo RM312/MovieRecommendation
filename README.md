@@ -1,13 +1,16 @@
 # 🎬 Movie Recommender System
 
-A **Content-Based Movie Recommendation System** built using **Python, Scikit-learn, and Streamlit**.  
-The system recommends movies based on similarity between features like **genres, cast, keywords, and overview** using **Cosine Similarity**.
+## Overview
+
+This project is a Movie Recommender System that processes data in a Jupyter Notebook and uses the processed data in a Python-based UI built with Streamlit. The recommendation system is based on Cosine Similarity, a technique commonly used to measure the similarity between two vectors (in this case, movie features). The workflow is split into two parts:
+
+Data Processing in Jupyter Notebook: Data cleaning, processing, and model training are performed in the MovieRecommender.ipynb. Cosine similarity is used to calculate the similarity between movies based on their features. The results, including the recommendation model, are serialized into a binary file that the main program can load.
+User Interface using Streamlit: The UI is developed using Streamlit (app.py), which provides an interactive interface where users can input their preferences and get movie recommendations.
 
 ---
 
-## 🌐 Live Demo
 
-👉 [Click Here to Try the App](https://movie-deploy-za23lmsb9v5udkypcrpmop.streamlit.app/)
+👉 [You can access the live version of the project here:](https://movie-deploy-za23lmsb9v5udkypcrpmop.streamlit.app/)
 
 ---
 
@@ -16,8 +19,8 @@ The system recommends movies based on similarity between features like **genres,
 - Content-based recommendation system  
 - Cosine similarity-based recommendations  
 - Interactive UI using **Streamlit**  
-- Preprocessing and model building using Jupyter Notebook  
-- Fast and scalable recommendation pipeline  
+- Modular project structure  
+- Fast recommendations using precomputed similarity matrix  
 
 ---
 
@@ -26,11 +29,21 @@ The system recommends movies based on similarity between features like **genres,
 ```text
 MovieRecommendation/
 
-├── MovieRecommender.ipynb   # Data preprocessing & model building
-├── app.py                   # Streamlit UI
-├── model.pkl                # Serialized model (generated)
-├── requirements.txt
-├── README.md
+├── app/                    # Streamlit application
+│   └── app.py
+│
+├── data/                   # Dataset and processed files
+│   ├── movies.pkl
+│   └── similarity.pkl
+│
+├── notebooks/              # Jupyter notebooks for preprocessing
+│   └── MovieRecommender.ipynb
+│
+├── src/                    # Core recommendation logic
+│   └── recommender.py (or similar logic files)
+│
+├── requirements.txt        # Dependencies
+└── README.md
 ```
 
 ---
@@ -41,10 +54,10 @@ The system follows a **content-based filtering approach**:
 
 1. Data cleaning and preprocessing  
 2. Feature extraction (genres, keywords, cast, overview)  
-3. Text vectorization (CountVectorizer / TF-IDF)  
+3. Text vectorization using CountVectorizer  
 4. Cosine similarity computation  
-5. Model serialization (pickle/joblib)  
-6. Recommendation via Streamlit UI  
+5. Saving processed data as `.pkl` files  
+6. Recommendation through Streamlit UI  
 
 ---
 
@@ -52,7 +65,7 @@ The system follows a **content-based filtering approach**:
 
 The dataset used is:
 
-🔗 [Kaggle TMDB Movie Metadata](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+🔗 https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata  
 
 ### Dataset Includes:
 
@@ -93,21 +106,26 @@ pip install -r requirements.txt
 
 ## 🚀 Quick Start
 
-### Step 1: Run Notebook (Model Creation)
+### Step 1: Run Notebook (Data Processing)
 
-1. Open `MovieRecommender.ipynb`
+1. Open:
+   ```
+   notebooks/MovieRecommender.ipynb
+   ```
 2. Run all cells
 3. This will generate:
-   ```
-   model.pkl
-   ```
+
+```
+data/movies.pkl
+data/similarity.pkl
+```
 
 ---
 
 ### Step 2: Run Streamlit App
 
 ```bash
-streamlit run app.py
+streamlit run app/app.py
 ```
 
 Then open:
@@ -118,21 +136,29 @@ http://localhost:8501
 
 ---
 
-## ⚙️ Model File
+## ⚙️ Model Files
 
-- The trained model is saved as `model.pkl`
-- Ensure it is in the same directory as `app.py`
-- This file contains:
-  - Processed movie data  
-  - Cosine similarity matrix  
+The following files are generated after preprocessing:
+
+- `data/movies.pkl` → Processed movie dataset  
+- `data/similarity.pkl` → Cosine similarity matrix  
+
+Ensure these files exist before running the application.
 
 ---
 
-## 📈 How It Works
+## ▶️ How It Works
 
 - User selects a movie  
 - System computes similarity scores  
-- Top similar movies are returned  
+- Top similar movies are recommended  
+
+---
+
+## 📈 Output
+
+- List of recommended movies  
+- Ranked by similarity score  
 
 ---
 
@@ -143,15 +169,15 @@ http://localhost:8501
 - NumPy  
 - Scikit-learn  
 - Streamlit  
-- Pickle / Joblib  
+- Pickle  
 
 ---
 
 ## 📊 Results
 
-- Accurate similarity-based recommendations  
-- Fast retrieval using precomputed similarity matrix  
-- Interactive user experience via Streamlit  
+- Fast recommendations using precomputed similarity matrix  
+- Accurate similarity-based suggestions  
+- Interactive web-based UI  
 
 ---
 
@@ -159,13 +185,19 @@ http://localhost:8501
 
 - Hybrid recommendation system  
 - User-based personalization  
-- Deploy with user login system  
-- Improve UI/UX  
+- Improved UI/UX  
+- Deployment with authentication  
+
+---
+
+## 📜 License
+
+This project is for **educational purposes only**.
 
 ---
 
 ## 🙏 Acknowledgements
 
 - Kaggle TMDB Dataset  
-- Scikit-learn Documentation  
+- Scikit-learn  
 - Streamlit  
