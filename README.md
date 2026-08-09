@@ -196,11 +196,6 @@ Ensure these files exist before running the application.
 - Improved UI/UX  
 - Deployment with authentication  
 
----
-
-## 📜 License
-
-This project is for **educational purposes only**.
 
 ---
 
