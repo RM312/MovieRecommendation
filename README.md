@@ -10,7 +10,7 @@ User Interface using Streamlit: The UI is developed using Streamlit (app.py), wh
 ---
 
 
-👉 [You can access the live version of the project here:](https://movie-deploy-za23lmsb9v5udkypcrpmop.streamlit.app/)
+👉 You can access the live version of the project here: [Movie Recommnedation System](https://movie-deploy-za23lmsb9v5udkypcrpmop.streamlit.app/)
 
 ---
 
